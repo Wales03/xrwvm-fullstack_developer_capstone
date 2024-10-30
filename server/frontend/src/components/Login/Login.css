@@ -8,7 +8,35 @@
   background-color: rgb(97, 64, 128);
   align-items: flex-start;
 }
+ nav {
+            background: #35424a !important;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        nav h2 .highlight, nav .current a {
+            color: #e8491d;
+            font-weight: bold;
+            margin-right:2%;
+            white-space: nowrap;
+        }
+        .nav-link{
+            font-weight:300;
+            text-transform:uppercase;
+            color:white !important;
 
+        }
+        .nav-link.active{
+            font-weight:bold;
+            text-decoration:underline;
+        }
 .navitems{
   display: flex;
   flex-direction: row;

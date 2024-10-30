@@ -15,20 +15,20 @@ let checkSession = ()=>{
 
   if (curr_user && curr_user !== "") {
     document.getElementById("loginlogout").innerHTML = 
-    '<span class="homepage_links">' + curr_user +'</span>' +
-    '<a class="homepage_links" onclick="logout()" href="/">Logout</a>'
+    '<span class="homepage_links" style="color:#f1880f !important; text-transform:capitalize;">' + curr_user +'</span>' +
+    '<a class="homepage_links"  onclick="logout()" href="/">Logout</a>'
   } else {
     document.getElementById("loginlogout").innerHTML = 
-    '<a class="homepage_links" href="/login">Login</a>'+
+    '<a class="homepage_links"  href="/login">Login</a>'+
     '<a class="homepage_links"  href="/register">Register</a>'
   }
  }
 </script>
 </head>
 <body onload="checkSession()">
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+<nav class="navbar navbar-expand-lg navbar-light" style=" height: 1in;">
   <div class="container-fluid">
-    <h2 style="padding-right: 5%;">Dealerships</h2>
+    <h2 style="padding-right: 5%;"><span class="highlight">North-atlantic</span>Dealerships</h2>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -56,7 +56,7 @@ let checkSession = ()=>{
   <img src="static/car_dealership.jpg" class="card-img-top" alt="...">
   <div class="banner">
     <h5>Welcome to our Dealerships!</h5>
-    <a href="/dealers" class="btn" style="background-color: aqua;margin:10px">View Dealerships</a>
+    <a href="/dealers" class="btn" style="background-color: #e8491d;margin:10px;color:white;">View Dealerships</a>
   </div>
 </div>
 </div>
