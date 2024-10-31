@@ -60,7 +60,7 @@ const Dealer = () => {
     get_dealer();
     get_reviews();
     if(sessionStorage.getItem("username")) {
-      setPostReview(<a href={post_review}><img src={review_icon} style={{width:'10%',marginLeft:'10px',marginTop:'10px'}} alt='Post Review'/></a>)
+      setPostReview(<a style={{textDecoration:"none",color:"white",marginLeft:"20px",backgroundColor:"#e8491d",borderRadius:"10px",padding:"15px",paddingTop:"5px",paddingBottom:"5px",cursor:"pointer"}} href={post_review}><span style={{color:"white",fontSize:"16px"}}>Write a review</span></a>)
 
       
     }
@@ -68,7 +68,7 @@ const Dealer = () => {
 
 
 return(
-  <div style={{margin:"20px"}}>
+  <div >
       <Header/>
       <div style={{marginTop:"10px"}}>
       <h1 style={{color:"grey"}}>{dealer.full_name}{postReview}</h1>

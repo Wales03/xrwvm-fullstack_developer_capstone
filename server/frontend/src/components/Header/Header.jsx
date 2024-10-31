@@ -47,13 +47,13 @@ if ( curr_user !== null &&  curr_user !== "") {
               <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" style={{fontSize: "larger"}} aria-current="page" href="/">Home</a>
+                    <a class="nav-link active" style={{fontSize: "15px"}} aria-current="page" href="/">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" style={{fontSize: "larger"}} href="/about">About Us</a>
+                    <a class="nav-link" style={{fontSize: "15px"}} href="/about">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" style={{fontSize: "larger"}} href="/contact">Contact Us</a>
+                    <a class="nav-link" style={{fontSize: "15px"}} href="/contact">Contact Us</a>
                   </li>
                 </ul>
                 <span class="navbar-text">
