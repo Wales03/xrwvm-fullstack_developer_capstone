@@ -61,9 +61,9 @@ def registration(request):
         data = {"userName": username, "error": "Already Registered"}
         return JsonResponse(data)
     else:
-        user = User.objects.create_user(username=username,
-                first_name=first_name, last_name=last_name, password=password,
-                email=email)
+        user = User.objects.create_user(username=username, 
+                                         first_name=first_name, last_name=last_name, password=password,
+                                         email=email)
         login(request, user)
         data = {"userName": username, "status": "Authenticated"}
         return JsonResponse(data)
