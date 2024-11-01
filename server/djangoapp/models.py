@@ -16,7 +16,7 @@ class CarMake(models.Model):
     website = models.URLField()
 
     def __str__(self):
-        return self.name  
+        return self.name
 
 
 class CarModel(models.Model):
@@ -27,13 +27,13 @@ class CarModel(models.Model):
             ('SEDAN', 'Sedan'),
             ('SUV', 'SUV'),
             ('WAGON', 'Wagon'),
-            ('COUPE', 'Coupe'),  
+            ('COUPE', 'Coupe'),
             ('TRUCK', 'Truck'),
             ('CONVERTIBLE', 'Convertible'),
             ]
     type = models.CharField(max_length=12, choices=CAR_TYPES, default='SUV')
     year = models.IntegerField(default=2023,
-        validators=[
+    validators=[
             MaxValueValidator(2023),
             MinValueValidator(2015)
             ])

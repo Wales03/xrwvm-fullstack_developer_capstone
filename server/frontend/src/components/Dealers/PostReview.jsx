@@ -1,4 +1,3 @@
-/*jshint esversion: 8 */
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import "./Dealers.css";
@@ -38,14 +37,14 @@ const PostReview = () => {
     let model_chosen = model_split[1];
 
     let jsoninput = JSON.stringify({
-      name: name,
-      dealership: id,
-      review: review,
-      purchase: true,
-      purchase_date: date,
-      car_make: make_chosen,
-      car_model: model_chosen,
-      car_year: year,
+      "name": name,
+      "dealership": id,
+      "review": review,
+      "purchase": true,
+      "purchase_date": date,
+      "car_make": make_chosen,
+      "car_model": model_chosen,
+      "car_year": year,
     });
 
     console.log(jsoninput);
