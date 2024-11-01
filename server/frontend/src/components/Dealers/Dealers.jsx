@@ -1,3 +1,4 @@
+/*jshint esversion: 8 */
 import React, { useState, useEffect } from 'react';
 import "./Dealers.css";
 import "../assets/style.css";
@@ -7,7 +8,7 @@ import review_icon from "../assets/reviewicon.png"
 const Dealers = () => {
   const [dealersList, setDealersList] = useState([]);
   // let [state, setState] = useState("")
-  let [states, setStates] = useState([])
+  let [states, setStates] = useState([]);
 
   // let root_url = window.location.origin
   let dealer_url ="/djangoapp/get_dealers";
@@ -23,8 +24,8 @@ const Dealers = () => {
     if(retobj.status === 200) {
       let state_dealers = Array.from(retobj.dealers)
       setDealersList(state_dealers)
-    }
-  }
+    };
+  };
 
   const get_dealers = async ()=>{
     const res = await fetch(dealer_url, {
@@ -76,12 +77,12 @@ return(
       </tr>
      {dealersList.map(dealer => (
         <tr>
-          <td>{dealer['id']}</td>
-          <td><a href={'/dealer/'+dealer['id']}>{dealer['full_name']}</a></td>
-          <td>{dealer['city']}</td>
-          <td>{dealer['address']}</td>
-          <td>{dealer['zip']}</td>
-          <td>{dealer['state']}</td>
+          <td>{dealer.id}</td>
+          <td><a href={'/dealer/'+dealer.id}>{dealer.full_name}</a></td>
+          <td>{dealer.city}</td>
+          <td>{dealer.address}</td>
+          <td>{dealer.zip}</td>
+          <td>{dealer.state}</td>
           {isLoggedIn ? (
             <td><a href={`/postreview/${dealer['id']}`}><img src={review_icon} className="review_icon" alt="Post Review"/></a></td>
            ):<></>
@@ -90,7 +91,7 @@ return(
       ))}
      </table>;
   </div>
-)
-}
+);
+};
 
-export default Dealers
+export default Dealers;

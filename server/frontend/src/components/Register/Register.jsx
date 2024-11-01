@@ -1,3 +1,4 @@
+/*jshint esversion: 8 */
 import React, { useState } from "react";
 import "./Register.css";
 import user_icon from "../assets/person.png"
